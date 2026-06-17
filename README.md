@@ -1,6 +1,4 @@
-# 🌧️ Vṛṣṭi — Online Clothing Store
-
-> *Like rain nourishes the earth, Vṛṣṭi refreshes your wardrobe.*
+# Vṛṣṭi - Online Clothing Store
 
 A full-stack MERN (MongoDB, Express.js, React, Node.js) e-commerce clothing platform with a rain/nature-inspired design.
 
@@ -51,15 +49,15 @@ A full-stack MERN (MongoDB, Express.js, React, Node.js) e-commerce clothing plat
 
 ## Features
 
-- 🛍️ Browse clothing by categories, gender, age, size, color, price
-- 🔍 Full-text search with real-time suggestions
-- 🛒 Personalized shopping cart
-- ❤️ Wishlist
-- 💰 Virtual wallet system (₹10,000 starting balance)
-- ⭐ Ratings & reviews (purchase-gated)
-- 👤 User authentication (email/password + Google OAuth)
-- 🔧 Admin panel for product management
-- 🌧️ Beautiful rain-themed UI
+- Browse clothing by categories, gender, age, size, color, price
+- Full-text search with real-time suggestions
+- Personalized shopping cart
+- Wishlist
+- Virtual wallet system (₹10,000 starting balance)
+- Ratings & reviews (purchase-gated)
+- User authentication (email/password + Google OAuth)
+- Admin panel for product management
+- Beautiful rain-themed UI
 
 ## License
 
