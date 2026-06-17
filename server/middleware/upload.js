@@ -1,14 +1,20 @@
-﻿const multer = require('multer');
+const multer = require('multer');
 const path = require('path');
 
-// Storage configuration
-const storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, path.join(__dirname, '..', 'uploads'));
-  },
-  filename: function (req, file, cb) {
-    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
-    cb(null, `product-${uniqueSuffix}${path.extname(file.originalname)}`);
+const { CloudinaryStorage } = require('multer-storage-cloudinary');
+const cloudinary = require('cloudinary').v2;
+
+// config is automatically picked up from process.env.CLOUDINARY_URL
+
+const storage = new CloudinaryStorage({
+  cloudinary: cloudinary,
+  params: {
+    folder: 'vrishti',
+    allowedFormats: ['jpeg', 'jpg', 'png', 'webp', 'gif'],
+    public_id: (req, file) => {
+      const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1e9);
+      return `product-${uniqueSuffix}`;
+    },
   },
 });
 

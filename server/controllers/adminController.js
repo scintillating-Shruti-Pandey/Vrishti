@@ -26,7 +26,7 @@ exports.addProduct = async (req, res) => {
     if (req.files && req.files.length > 0) {
       for (const file of req.files) {
         if (file.fieldname === 'images') {
-          images.push(`/uploads/${file.filename}`);
+          images.push(file.path);
         }
       }
     }
@@ -41,7 +41,7 @@ exports.addProduct = async (req, res) => {
       parsedColors.forEach((color, index) => {
         const colorImages = req.files
           .filter(f => f.fieldname === `color_images_${index}`)
-          .map(f => `/uploads/${f.filename}`);
+          .map(f => f.path);
         if (colorImages.length > 0) {
           color.images = colorImages;
         }
@@ -99,7 +99,7 @@ exports.updateProduct = async (req, res) => {
     if (req.files && req.files.length > 0) {
       const newImages = req.files
         .filter(f => f.fieldname === 'images')
-        .map((file) => `/uploads/${file.filename}`);
+        .map((file) => file.path);
       
       // Append to existing images or replace
       if (updateData.keepExistingImages === 'true') {
@@ -115,7 +115,7 @@ exports.updateProduct = async (req, res) => {
         updateData.colors.forEach((color, index) => {
           const colorImages = req.files
             .filter(f => f.fieldname === `color_images_${index}`)
-            .map(f => `/uploads/${f.filename}`);
+            .map(f => f.path);
           
           if (colorImages.length > 0) {
             color.images = [...(color.images || []), ...colorImages];
