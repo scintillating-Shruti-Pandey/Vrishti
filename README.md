@@ -1,6 +1,6 @@
 # Vṛṣṭi - Online Clothing Store
 
-A full-stack MERN (MongoDB, Express.js, React, Node.js) e-commerce clothing platform with a rain/nature-inspired design.
+A full-stack MERN (MongoDB, Express.js, React, Node.js) e-commerce clothing platform with a luxorious design.
 
 ## Tech Stack
 
@@ -8,7 +8,7 @@ A full-stack MERN (MongoDB, Express.js, React, Node.js) e-commerce clothing plat
 - **Backend**: Express.js, Node.js
 - **Database**: MongoDB with Mongoose ODM
 - **Auth**: JWT + Google OAuth 2.0 (Passport.js)
-- **File Uploads**: Multer
+- **Image Uploads**: Cloudinary
 
 ## Getting Started
 
@@ -57,7 +57,7 @@ A full-stack MERN (MongoDB, Express.js, React, Node.js) e-commerce clothing plat
 - Ratings & reviews (purchase-gated)
 - User authentication (email/password + Google OAuth)
 - Admin panel for product management
-- Beautiful rain-themed UI
+- Premium-luxury themed UI
 
 ## License
 
